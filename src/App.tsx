@@ -9,7 +9,7 @@ function App() {
   const [text, setText] = useState("");
   const [dataUser , setDataUser] = useState({});
 
-  const API_KEY = "RGAPI-86ce51d7-df30-44a7-8779-76a33ee2c6b1";
+  const API_KEY = "RGAPI-e8b13aed-3e4e-40a1-82a5-641fcbd59fac";
   const api =
     "https://br1.api.riotgames.com/lol/summoner/v4/summoners/by-name/";
   const apiMatchID = "https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/";
@@ -28,6 +28,7 @@ function App() {
     <Container>
       <div>
         <label>Nickname ou Apelido </label>
+        <p style={{fontWeight: 'bold'}}>Ex("Joaperi", "E painsando")</p>
         <input type="text" onChange={(e) => setText(e.target.value)}
         placeholder="Digite seu nickname ou apelido" 
          />
@@ -36,10 +37,16 @@ function App() {
 
       {console.log(dataUser)}
 
+      { JSON.stringify(dataUser) !== '{}' ? 
+      <> 
+      <CardItem dataUser={dataUser} />  
+      </>:
+      <>  
+      <p style={{fontWeight: "bold", fontStyle: "italic"}}>Sem Jogadores sendo buscados</p>
+      </>}
       
-      <CardItem dataUser={dataUser} />
-      <CardGame dataUser = {dataUser} apiMatchID = {apiMatchID}
-      API_KEY = {API_KEY} />
+      {/* <CardGame dataUser = {dataUser} apiMatchID = {apiMatchID}
+      API_KEY = {API_KEY} /> */}
     </Container>
     </>
   );
