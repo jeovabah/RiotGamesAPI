@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { CardGame } from "./components/CardGame";
 import { CardItem } from "./components/CardItem";
+import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Container } from "./styles/styledApp";
 
@@ -9,7 +10,7 @@ function App() {
   const [text, setText] = useState("");
   const [dataUser , setDataUser] = useState({});
 
-  const API_KEY = "RGAPI-e8b13aed-3e4e-40a1-82a5-641fcbd59fac";
+  const API_KEY = "RGAPI-846fc82e-c186-4665-877b-75eb1b98702b";
   const api =
     "https://br1.api.riotgames.com/lol/summoner/v4/summoners/by-name/";
   const apiMatchID = "https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/";
@@ -47,6 +48,7 @@ function App() {
       
       {/* <CardGame dataUser = {dataUser} apiMatchID = {apiMatchID}
       API_KEY = {API_KEY} /> */}
+    <Footer />
     </Container>
     </>
   );

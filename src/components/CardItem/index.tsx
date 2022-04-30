@@ -19,7 +19,7 @@ export const CardItem = (props: DataUserProps) => {
   const urlImage = "http://ddragon.leagueoflegends.com/cdn/12.8.1/img/profileicon/"
   return (
     <div>
-        <Card sx={{ maxWidth: 345, backgroundColor: "#020313" }}>
+        <Card sx={{ width: 280, backgroundColor: "#020313" }}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -28,7 +28,7 @@ export const CardItem = (props: DataUserProps) => {
           alt="Logo"
         />
         <CardContent>
-          <Typography gutterBottom variant="h2" component="div">
+          <Typography gutterBottom variant="h2" component="div" sx={{fontSize:"1.5rem"}}>
             	{props.dataUser.name}
           </Typography>
           <Typography variant="body1" color="text.primary" sx={{fontWeight: "bold"}}>

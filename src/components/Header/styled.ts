@@ -4,7 +4,7 @@ export const Container = styled.header`
         width: 100%;
         height: 4rem;
         padding: 0 2rem;
-        margin-bottom: 8rem;
+        margin-bottom: 4rem;
         text-align: center;
 
     h1 {
