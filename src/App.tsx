@@ -36,7 +36,7 @@ function App() {
         <button className="buttonSubmit" onClick={dataNick}>Procurar</button>
       </div>
 
-      {console.log(dataUser)}
+      
 
       { JSON.stringify(dataUser) !== '{}' ? 
       <> 
