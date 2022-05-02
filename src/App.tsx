@@ -10,7 +10,6 @@ function App() {
   const [text, setText] = useState("");
   const [dataUser , setDataUser] = useState({});
 
-  const API_KEY = "RGAPI-af5d5193-fd07-409a-b0f7-44b6aefdaa7f";
   const api =
     "https://br1.api.riotgames.com/lol/summoner/v4/summoners/by-name/";
   const apiMatchID = "https://americas.api.riotgames.com/lol/match/v5/matches/by-puuid/";
@@ -19,7 +18,7 @@ function App() {
 
   function dataNick() {
     axios
-      .get(api + text + "?api_key=" + API_KEY)
+      .get(api + text + "?api_key=" + process.env.REACT_APP_API_KEY)
       .then((response) => setDataUser(response.data));
   }
 
